@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="lost lostdiv">Oh life expired,,i lost!!Try again</div>
+        <div class="lost1 lostdiv1 "></div>
+
+        <div class="entry">
+            <div class="move">
+                <div class="entryside">
+                <div class="desc1">Enter Number of Life required and click "continue".</div>
+            </div>
+
+        <div class="entryside">
+            <div class="desc">no of life required</div>
+            <input class="disp" type="text" id="life">
+        </div>
+
+        <div class="entryside leftBox">
+            <div class="desc">life left</div>
+            <div class="disp" id="lifeLeft"></div>
+        </div>
+
+        <button class="continue">Continue</button>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="title">Let Me Guess Your Secret Number!!</div>
+            <div class="guessDisp"></div>
+            <div class="select">select any of below</div>
+            <button class="lesser">is my guess is "Greater" than your secret num</button>
+            <button class="greater">is my guess is "Smaller" than your secret num</button>
+            <button class="equal">is my guess "correct"</button>
+        </div>
+    </div>
+    <div id='remove' class="remove">
+        Keep a secret number in your Mind which is less than "1000" ! let me guess it! <br>After clicking "i'm ready" u'll enter to maingame and please fill the block..when u enter!!..</br>
+        <button class="submit">i'm ready</button>
+        </div>
+    </div>
+
+    <script>
+        let start=document.getElementById("start")
+        let end=document.getElementById("end")
+        let life=document.getElementById("life")
+        let left=document.getElementById("lifeLeft")
+        let cont=document.querySelector(".continue")
+        let guessDisp=document.querySelector(".guessDisp")
+        let lesser=document.querySelector(".lesser")
+        let greater=document.querySelector(".greater")
+        let equal=document.querySelector(".equal")
+        let main=document.querySelector(".main")
+        let entry=document.querySelector(".entry")
+        let lost=document.querySelector(".lostdiv")
+        let lost1=document.querySelector(".lostdiv1")
+        let submit=document.querySelector(".submit")
+        let remove=document.getElementById("remove")
+
+
+        submit.onclick=function(){
+            remove.classList.add("welcome")
+        }
+        a=0
+        high=1000
+        low=0
+        remain=0
+
+
+        cont.onclick=function(){
+            if(life.value!='' && life.value>=1){
+                left.innerText=life.value
+                remain=life.value
+                guessDisp.innerText=` my guess is ${parseInt((low+high)/2)}`
+                a=Number(parseInt((low+high)/2))
+            }
+        }
+
+        lesser.onclick=function(){
+            if(remain!=''){
+            remain-=1
+
+            if(remain!=0){
+                high=a 
+                guessDisp.innerText=`my guess is ${parseInt((high+low)/2)}`
+                a=Number(parseInt((high+low)/2))
+                left.innerText=remain
+            }
+            else{
+
+                guessDisp.innerText="Sorry i lost "
+                life.value=''
+                left.innerText=remain
+                setTimeout(()=>{
+                entry.classList.add("lost")
+                main.classList.add("lost")
+                lost.classList.remove("lost")
+
+                },1000)
+
+            }
+            }
+        }
+        greater.onclick=function(){
+            if(remain!=''){
+                remain-=1
+            if(remain!=0){
+                low=a
+                guessDisp.innerText=`my guess is ${parseInt((high+low)/2)}`
+                a=Number(parseInt((high+low)/2))
+                left.innerText=remain
+            }
+            else{
+                guessDisp.innerText="Sorry i lost "
+                life.value=''
+                left.innerText=remain
+                setTimeout(()=>{
+                entry.classList.add("lost")
+                main.classList.add("lost")
+                lost.classList.remove("lost")
+
+                },1000)
+            }
+        }
+        }
+        equal.onclick=function(){
+            if(remain!=''){
+                guessDisp.innerText=`that's your secret num-${a}`
+                setTimeout(()=>{
+                entry.classList.add("lost1")
+                main.classList.add("lost1")
+                lost1.classList.remove("lost1") 
+                lost1.innerText=guessDisp.innerText         
+            },1000)
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

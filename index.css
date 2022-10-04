@@ -1,0 +1,324 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    height: 100vh;
+    background:linear-gradient(to bottom right,pink,cyan);
+    transition: all 2s;
+}  
+.entry{
+    float: left;
+    border: 5px solid black;
+    height: 40%;
+    width: 30%;
+    background-color: greenyellow;
+    border-radius: 70px;
+    position: relative;
+    top: 20%;
+
+
+} 
+.main{
+    float: left;
+    border: 10px solid navy;
+    height: 100%;
+    width: 65%;
+    border-radius: 50px;
+
+}
+.move{
+    position: relative;
+    top: 15%;
+    height: 80%;
+
+}
+
+.title{
+    line-height: 1.5;
+    /* background-color: white; */
+    height: 10%;
+    width: 95%;
+    padding: 10px 28px;
+    display: inline-block;
+    border-radius: 30px;
+    color: black;
+    font-weight: 500;
+    text-transform: capitalize;
+    /* border: 1px solid var(--white-alpha-40); */
+    font-family: inherit;
+    font-size: 36px;
+    cursor: pointer;
+    user-select: none;    
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title:hover{
+    color: white;
+    background-color: navy;
+    transition: 1s;
+} 
+.entryside{
+    height: 20%;
+    width: 80%;
+    /* background-color: gray; */
+    margin: 20px  ;
+    /* border-radius: 15%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftBox{
+    position: relative;
+    left: 160%;
+    top: -100%;
+}
+.desc{
+    width: 60%;
+    height: 100%;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 800;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to right bottom,plum,yellow) ;
+    border-radius: 10px;
+    font-family: cursive;
+    position: relative;
+    top: 10%;
+
+}
+.disp{
+    display: flex;
+    width: 38%;
+    height: 100%;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;   
+    background-color: plum;
+    border-radius: 20px;
+    position: relative;
+    top: 10%;
+    left:2%
+}
+.continue{
+    height: 15%;
+    width: 20%;
+    background-color: rebeccapurple;
+    border-radius: 10px;
+    position: relative;
+    top: -2%;
+    left: 40%;
+    color: white;
+    font-size: 1rem;
+    font-family: cursive;
+    font-weight: 800;
+}
+.guessDisp{
+    height: 10%;
+    width: 80%;
+    border: 2px solid black;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 3rem;
+    font-family: cursive;
+    color: whitesmoke;
+    background-color: navy;
+    border-radius: 40px;
+    border: 5px solid pink;
+
+}
+.welcome{
+    transform: scale(0);
+    visibility: hidden;
+    transition: 1s ease-in-out;
+}
+.remove{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to top left,greenyellow,pink);
+    top: 0;
+    left:0;
+    font-weight: 800;
+    font-size: 3rem;
+    font-family: cursive;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid navy;
+    box-sizing: border-box;
+    border-radius: 50px;
+
+}
+.submit{
+    height: 8%;
+    width: 8%;
+    position: relative;
+    top: 40%;
+    left: -47%;
+    border-radius: 20%;
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: cursive;
+    background-color: navy;
+    color: azure;
+}
+.lost{
+    transform: scale(0);
+    visibility: hidden;
+    transition: 1s ease-in-out;
+
+}
+.lostdiv{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    height: 20%;
+    width: 70%;
+    font-size: 3rem;
+    transition: 1s ease-in-out;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    font-family: cursive;
+    font-weight: 800;
+    border: 10px solid navy;
+}
+.lost1{
+    transform: scale(0);
+    visibility: hidden;
+    transition: 1s ease-in-out;
+}
+.lostdiv1{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    height: 20%;
+    width: 70%;
+    font-size: 3rem;
+    transition: 1s ease-in-out;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    font-family: cursive;
+    font-weight: 800;
+    border: 10px solid navy;
+}
+.scaling{
+    transform: scale(2);
+}
+.select{
+    height: 5%;
+    width: 15%;
+    border: 2px solid black;
+    position: relative;
+    top: 15%;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    background: linear-gradient(to right bottom,orange,white);
+}
+.lesser{
+    height: 10%;
+    width: 20%;
+    border:2px solid black;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    text-transform: capitalize;
+    background: linear-gradient(to left bottom,brown,pink);
+    font-family: cursive;
+}
+.greater{
+
+    background: linear-gradient(to left bottom,lightseagreen,greenyellow);
+    font-family: cursive;
+    height: 10%;
+    width: 20%;
+    border:2px solid black;
+    position: relative;
+    top: 10%;
+    left: 60%;
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    text-transform: capitalize;
+}
+.equal{
+    background-color: f;
+    background: linear-gradient(to left bottom,firebrick,greenyellow);
+    font-family: cursive;
+    height: 10%;
+    width: 20%;
+    border:2px solid black;
+    position: relative;
+    top: 12%;
+    left: 37.5%;
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    text-transform: capitalize;
+
+}
+.explain{
+    height: 15%;
+    width: 98%;
+    background-color: aqua;
+    font-family: cursive;
+    font-weight: 800;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: solid 5px navy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desc1{
+    height: 150%;
+    width: 80%;
+    background:linear-gradient(to top left,aqua,white);
+    font-family:cursive;
+    font-size: 1rem;
+    font-weight: 800;
+    border: 5px solid navy;
+    border-radius: 20px;
+    position: relative;
+    left: 5%;
+}
